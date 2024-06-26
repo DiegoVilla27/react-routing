@@ -8,10 +8,7 @@ const PublicRouteGuard = ({ children }: IProps) => {
   const token: string = localStorage.getItem("token")!;
 
   if (token) {
-    return Navigate({
-      to: "/",
-      replace: true
-    });
+    return <Navigate to="/" replace />;
   }
 
   return children;
